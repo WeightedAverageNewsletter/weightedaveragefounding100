@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Weighted Average — Become One of the Founding 100</title>
+<meta name="description" content="Three newsletters every weekday that tell you which stories matter, what's really going on underneath, and exactly what to say about them. Join the Founding 100: help shape it, and read free for life.">
+<meta property="og:title" content="Weighted Average — Become one of the Founding 100">
+<meta property="og:description" content="Markets, Business and AI in Business. The story, the second-order thinking, a question to start the conversation and an answer to hold your own. 100 free spots.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#035AA6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#035AA6; --blue-deep:#02467F; --lime:#CAF238; --lime-2:#DDF291;
+  --paper:#F2EDE4; --cell:#FFFDF8; --orange:#D9501E;
+  --ink:#14212E; --muted:#4D5B69; --grid:rgba(3,90,166,.10); --rule:rgba(3,90,166,.22);
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --sans:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);font-variation-settings:"wdth" 100;color:var(--ink);background:var(--paper);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:96px 28px;line-height:1.55;font-size:17px;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+@media(min-width:720px){.wrap{padding:0 32px}}
+
+/* top bar */
+.bar{background:var(--blue);color:#fff;position:sticky;top:0;z-index:20}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;letter-spacing:.08em;font-size:14px;font-variation-settings:"wdth" 110}
+.logo .xbar{display:grid;place-items:center;width:32px;height:32px;background:var(--lime);color:var(--blue);font-family:Georgia,serif;font-style:italic;font-size:20px;font-weight:700;border-radius:4px}
+@media(max-width:420px){.logo{font-size:12px;letter-spacing:.05em;gap:8px}.bar .cta-sm{font-size:11px;padding:8px 10px}}
+.bar .cta-sm{font-family:var(--mono);font-size:12px;font-weight:700;text-decoration:none;background:var(--lime);color:var(--blue);padding:8px 12px;border-radius:4px;white-space:nowrap}
+.fx{background:var(--cell);border-bottom:1px solid var(--rule)}
+.fx .wrap{display:flex;align-items:center;gap:12px;height:36px;font-family:var(--mono);font-size:12.5px;color:var(--muted);overflow:hidden;white-space:nowrap}
+.fx b{color:var(--blue);font-style:italic;font-family:Georgia,serif;font-size:15px}
+.fx .sep{width:1px;height:18px;background:var(--rule)}
+.fx code{font-family:inherit;color:var(--ink);overflow:hidden;text-overflow:ellipsis}
+.fx code i{color:var(--orange);font-style:normal}
+
+/* shared */
+section{padding:72px 0}
+@media(min-width:900px){section{padding:104px 0}}
+.ref{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:18px}
+.ref span{background:var(--blue);color:var(--lime);padding:3px 7px;border-radius:3px}
+h1,h2{font-variation-settings:"wdth" 78;font-weight:850;letter-spacing:-.015em;color:var(--blue);line-height:.98}
+h1{font-size:clamp(3rem,10.5vw,6.4rem)}
+h2{font-size:clamp(2.1rem,6vw,3.6rem);max-width:18ch}
+mark{background:linear-gradient(transparent 12%,var(--lime) 12%,var(--lime) 92%,transparent 92%);color:inherit;padding:0 .08em}
+.lede{font-size:clamp(1.08rem,2.2vw,1.3rem);color:var(--ink);max-width:36rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-variation-settings:"wdth" 100;font-weight:800;font-size:17px;background:var(--blue);color:#fff;border:0;border-radius:6px;padding:16px 24px;text-decoration:none;cursor:pointer;box-shadow:4px 4px 0 var(--lime),4px 4px 0 1px var(--blue);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(-1px,-1px);box-shadow:6px 6px 0 var(--lime),6px 6px 0 1px var(--blue)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--lime),1px 1px 0 1px var(--blue)}
+.btn:disabled{opacity:.6;cursor:wait}
+.btn:focus-visible,input:focus-visible,select:focus-visible,.cta-sm:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+
+/* hero */
+.hero{padding-top:56px;padding-bottom:40px}
+@media(min-width:900px){.hero{padding-bottom:56px}}
+.hero-grid{display:grid;gap:40px}
+@media(min-width:940px){.hero-grid{grid-template-columns:1.35fr 1fr;align-items:end;gap:56px}}
+.hero .tagline{font-family:var(--mono);font-size:13px;color:var(--muted);margin:26px 0 30px;max-width:34rem}
+.hero .lede{margin-top:22px}
+
+/* counter cell */
+.counter{background:var(--cell);border:1.5px solid var(--blue);border-radius:6px;overflow:hidden;box-shadow:8px 8px 0 var(--blue)}
+.counter .head{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--blue);color:#fff;padding:8px 14px}
+.counter .head em{font-style:normal;color:var(--lime)}
+.counter .body{padding:22px 20px 20px}
+.counter .big{font-variation-settings:"wdth" 70;font-weight:900;color:var(--blue);font-size:clamp(3.2rem,9vw,4.6rem);line-height:.9;font-variant-numeric:tabular-nums}
+.counter .big small{font-size:.38em;font-weight:700;color:var(--muted);font-variation-settings:"wdth" 90}
+.counter .label{font-weight:600;margin-top:6px}
+.meter{height:14px;border:1.5px solid var(--blue);border-radius:3px;margin:16px 0 10px;background:repeating-linear-gradient(90deg,transparent 0 calc(10% - 1px),var(--grid) calc(10% - 1px) 10%);overflow:hidden}
+.meter i{display:block;height:100%;width:0;background:var(--lime);border-right:1.5px solid var(--blue);transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.counter .note{font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+.counter .note b{color:var(--orange)}
+.counter .btn{width:100%;margin-top:18px}
+.counter[data-state="unknown"] .meter{display:none}
+
+/* moments */
+.sheet{margin-top:40px;border:1.5px solid var(--blue);border-radius:6px;overflow:hidden;background:var(--cell)}
+.sheet-row{display:grid;grid-template-columns:48px 1fr;border-top:1px solid var(--rule)}
+.sheet-row:first-child{border-top:0}
+.sheet-row .n{font-family:var(--mono);font-size:12px;color:var(--muted);background:#ECE6DA;border-right:1px solid var(--rule);display:grid;place-items:start center;padding-top:22px}
+.sheet-row .c{padding:20px 20px;font-size:clamp(1.05rem,2.4vw,1.28rem);font-weight:500}
+.sheet-row .c q{font-style:italic;color:var(--blue);quotes:"\201C" "\201D"}
+.sheet-head{display:grid;grid-template-columns:48px 1fr;background:#ECE6DA;border-bottom:1px solid var(--rule);font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.sheet-head div{padding:6px 12px}.sheet-head div:first-child{border-right:1px solid var(--rule)}
+.after{margin-top:36px;font-size:clamp(1.2rem,3vw,1.6rem);font-weight:700;max-width:34rem;font-variation-settings:"wdth" 90}
+.after span{color:var(--orange)}
+
+/* problem */
+.band{background:var(--blue);color:#fff;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:96px 28px}
+.band h2,.band .ref{color:#fff}
+.band .ref span{background:var(--lime);color:var(--blue)}
+.band .lede{color:#E6EEF7;margin-top:20px}
+.qs{display:grid;gap:14px;margin-top:44px}
+@media(min-width:760px){.qs{grid-template-columns:1fr 1fr;gap:18px}}
+.q{background:var(--cell);color:var(--ink);border-radius:6px;padding:22px 22px 24px;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start}
+.q .k{font-family:var(--mono);font-weight:700;font-size:13px;background:var(--lime);color:var(--blue);padding:4px 8px;border-radius:3px;margin-top:3px}
+.q h3{font-size:1.18rem;font-weight:800;color:var(--blue);line-height:1.2;font-variation-settings:"wdth" 92}
+.q p{color:var(--muted);margin-top:6px;font-size:15.5px}
+
+/* who */
+.who-grid{display:grid;gap:40px}
+@media(min-width:900px){.who-grid{grid-template-columns:1fr 1.1fr;gap:64px;align-items:start}}
+.ladder{display:grid;gap:0;border:1.5px solid var(--blue);border-radius:6px;overflow:hidden;background:var(--cell)}
+.rung{display:grid;grid-template-columns:118px 1fr;border-top:1px solid var(--rule)}
+.rung:first-child{border-top:0}
+.rung .t{font-family:var(--mono);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:18px 14px;border-right:1px solid var(--rule);background:#ECE6DA;color:var(--muted)}
+.rung .d{padding:16px 18px}
+.rung.you{background:var(--lime-2)}
+.rung.you .t{background:var(--lime);color:var(--blue)}
+.rung.you .d{font-weight:700}
+.who p+p{margin-top:16px}
+
+/* letters */
+.letters{display:grid;gap:18px;margin-top:44px}
+@media(min-width:860px){.letters{grid-template-columns:repeat(3,1fr)}}
+.letter{background:var(--cell);border:1.5px solid var(--blue);border-radius:6px;padding:0 0 22px;overflow:hidden;display:flex;flex-direction:column}
+.letter .tab{font-family:var(--mono);font-size:11.5px;font-weight:700;padding:8px 16px;background:#ECE6DA;border-bottom:1px solid var(--rule);color:var(--muted);letter-spacing:.04em}
+.letter h3{font-variation-settings:"wdth" 80;font-weight:850;font-size:1.9rem;line-height:1;color:var(--blue);padding:20px 20px 0}
+.letter h3 small{display:block;font-size:.5em;font-weight:700;color:var(--orange);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;font-variation-settings:"wdth" 100}
+.letter p{padding:12px 20px 0;color:var(--muted);font-size:15.5px}
+.anatomy{margin-top:56px;display:grid;gap:28px}
+@media(min-width:940px){.anatomy{grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}.anatomy>div:first-child{position:sticky;top:120px}}
+.parts{list-style:none;counter-reset:p;border-left:3px solid var(--blue)}
+.parts li{counter-increment:p;padding:10px 0 10px 20px;position:relative}
+.parts li::before{content:counter(p,decimal-leading-zero);font-family:var(--mono);font-size:12px;font-weight:700;color:var(--blue);position:absolute;left:-17px;top:12px;background:var(--paper);padding:2px 4px;border:1.5px solid var(--blue);border-radius:3px;transform:translateX(-50%)}
+.parts b{display:block;color:var(--blue);font-weight:800;font-variation-settings:"wdth" 92}
+.parts span{color:var(--muted);font-size:15.5px}
+.parts li.extra::before{content:"+";background:var(--lime)}
+
+/* sample */
+.sample{background:#fff;border:1px solid var(--rule);border-radius:8px;box-shadow:0 1px 0 var(--rule),12px 12px 0 rgba(3,90,166,.12);overflow:hidden}
+.sample .meta{font-family:var(--mono);font-size:11.5px;color:var(--muted);padding:10px 20px;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.sample .in{padding:24px 22px 26px}
+@media(min-width:600px){.sample .in{padding:28px 30px 30px}}
+.sample h4{font-variation-settings:"wdth" 82;font-weight:850;font-size:1.65rem;line-height:1.05;color:var(--ink);margin-bottom:14px}
+.sample p{font-size:15.5px;margin-top:10px}
+.sample p b{color:var(--blue)}
+.sample .qa{background:var(--lime-2);border-left:3px solid var(--blue);padding:12px 14px;border-radius:0 4px 4px 0;font-style:italic;margin-top:14px}
+.sample .qa b{font-style:normal;display:block;font-size:12px;font-family:var(--mono);letter-spacing:.04em;text-transform:uppercase;margin-bottom:4px}
+.sample .ipe{margin-top:18px;padding-top:16px;border-top:1px dashed var(--rule)}
+
+/* deal */
+.steps{display:grid;gap:0;margin-top:44px;border:1.5px solid var(--blue);border-radius:6px;overflow:hidden;background:var(--cell)}
+@media(min-width:860px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{padding:24px 22px 26px;border-top:1px solid var(--rule)}
+.step:first-child{border-top:0}
+@media(min-width:860px){.step{border-top:0;border-left:1px solid var(--rule)}.step:first-child{border-left:0}}
+.step .num{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--muted)}
+.step h3{font-variation-settings:"wdth" 85;font-weight:850;font-size:1.4rem;color:var(--blue);line-height:1.1;margin:10px 0 8px}
+.step p{font-size:15.5px;color:var(--muted)}
+.step.prize{background:var(--lime)}
+.step.prize .num{color:var(--blue)}
+.step.prize p{color:var(--ink)}
+.rule-strip{margin-top:20px;font-family:var(--mono);font-size:13px;color:var(--ink);display:flex;flex-wrap:wrap;gap:10px 22px}
+.rule-strip span::before{content:"✓ ";color:var(--blue);font-weight:700}
+.rule-strip span.x::before{content:"✕ ";color:var(--orange)}
+.band .rule-strip span::before{color:var(--lime)}
+.band .rule-strip span.x::before{color:#FF8A5C}
+
+/* form */
+.join-grid{display:grid;gap:36px}
+@media(min-width:940px){.join-grid{grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}}
+.form-card{background:var(--cell);border:1.5px solid var(--blue);border-radius:6px;box-shadow:10px 10px 0 var(--blue);overflow:hidden}
+.form-card .head{background:var(--blue);color:#fff;font-family:var(--mono);font-size:12px;font-weight:700;padding:10px 18px;letter-spacing:.05em;text-transform:uppercase;display:flex;justify-content:space-between}
+.form-card .head em{font-style:normal;color:var(--lime)}
+form{padding:22px 18px 24px;display:grid;gap:16px}
+@media(min-width:600px){form{padding:28px 28px 30px;grid-template-columns:1fr 1fr}form .full{grid-column:1/-1}}
+.field label{display:block;font-family:var(--mono);font-size:11.5px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
+.field label i{font-style:normal;color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0}
+.field input,.field select{width:100%;font:inherit;font-size:16px;color:var(--ink);background:#fff;border:1.5px solid var(--rule);border-radius:4px;padding:12px 12px;appearance:none;-webkit-appearance:none}
+.field select{background-image:linear-gradient(45deg,transparent 50%,var(--blue) 50%),linear-gradient(135deg,var(--blue) 50%,transparent 50%);background-position:calc(100% - 18px) 52%,calc(100% - 12px) 52%;background-size:6px 6px;background-repeat:no-repeat;padding-right:34px}
+.field input:focus,.field select:focus{border-color:var(--blue);outline:none;box-shadow:0 0 0 3px var(--lime-2)}
+.field.bad input,.field.bad select{border-color:var(--orange)}
+.field .err{display:none;color:var(--orange);font-size:13px;margin-top:5px;font-weight:600}
+.field.bad .err{display:block}
+.consent{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start;font-size:14px;color:var(--muted)}
+.consent input{width:20px;height:20px;margin-top:2px;accent-color:var(--blue)}
+.consent.bad{color:var(--orange)}
+form .btn{width:100%}
+.fine{font-family:var(--mono);font-size:12px;color:var(--muted);text-align:center}
+.done{display:none;padding:34px 26px 36px;text-align:left}
+.done .tick{display:grid;place-items:center;width:56px;height:56px;border-radius:6px;background:var(--lime);color:var(--blue);font-size:28px;font-weight:900;border:1.5px solid var(--blue);margin-bottom:18px}
+.done h3{font-variation-settings:"wdth" 80;font-weight:850;color:var(--blue);font-size:2rem;line-height:1.05}
+.done p{margin-top:12px;color:var(--ink)}
+.done .share{margin-top:20px;font-family:var(--mono);font-size:13px;color:var(--muted)}
+.zf-wrap{padding:8px 4px 0}
+.zf-wrap iframe{display:block;width:100%;height:900px;border:0;background:transparent}
+@media(min-width:600px){.zf-wrap iframe{height:760px}}
+.form-card.sent form{display:none}
+.form-card.sent .done{display:block}
+.preview-flag{display:none;margin-top:14px;font-family:var(--mono);font-size:12px;color:var(--orange)}
+
+/* faq */
+.faq{margin-top:36px;border-top:1.5px solid var(--blue)}
+.faq details{border-bottom:1px solid var(--rule);padding:18px 0}
+.faq summary{cursor:pointer;font-weight:800;font-size:1.12rem;color:var(--blue);list-style:none;display:flex;justify-content:space-between;gap:16px;font-variation-settings:"wdth" 92}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--mono);font-weight:700;color:var(--orange)}
+.faq details[open] summary::after{content:"−"}
+.faq p{margin-top:10px;color:var(--muted);max-width:44rem}
+
+footer{background:var(--ink);color:#C9D3DD;padding:40px 0 48px}
+footer .wrap{display:flex;flex-direction:column;gap:14px}
+footer .logo{color:#fff}
+footer p{font-size:15px;max-width:40rem}
+footer small{font-family:var(--mono);font-size:12px;color:#8494A4}
+
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Weighted Average home"><span class="xbar" aria-hidden="true">x̄</span>WEIGHTED AVERAGE</a>
+    <a class="cta-sm" href="#join">Claim a founding spot</a>
+  </div>
+</header>
+<div class="fx" aria-hidden="true">
+  <div class="wrap"><b>fx</b><span class="sep"></span><code>=WEIGHTED_AVERAGE(<i>news</i>, <i>context</i>, <i>conversation</i>)</code></div>
+</div>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="ref"><span>A1</span> The Founding 100 · Starts Mon 2 Nov</div>
+      <h1>Stop nodding <mark>along</mark> in meetings.</h1>
+      <p class="lede">Three newsletters every weekday that tell you which stories matter, what's really going on underneath, and exactly what to say about them. Short enough to read before your first meeting.</p>
+      <p class="tagline">Most newsletters tell you what happened. We tell you what to do with it.</p>
+    </div>
+    <aside class="counter">
+      <div class="head"><span>Founding 100</span><em data-c-status>Open</em></div>
+      <div class="body">
+        <div class="big" data-c-big>100 <small>free spots</small></div>
+        <div class="label" data-c-label>founding spots, free for life</div>
+        <div class="note" data-c-note>First editions land Monday 2 November. Help shape it for 4 weeks, read it free forever.</div>
+        <a class="btn" href="#join" data-c-btn>Claim a founding spot →</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- MOMENTS -->
+<section>
+  <div class="wrap">
+    <div class="ref"><span>B1</span> The moment</div>
+    <h2>You know the one.</h2>
+    <div class="sheet" role="list">
+      <div class="sheet-head" aria-hidden="true"><div>#</div><div>Meetings you've sat through</div></div>
+      <div class="sheet-row" role="listitem"><div class="n">1</div><div class="c">Someone brings up the Jio IPO, and all you've got is <q>isn't that Ambani's company?</q></div></div>
+      <div class="sheet-row" role="listitem"><div class="n">2</div><div class="c">Your boss is excited about a big acquisition. You nod, then quietly google the company under the table.</div></div>
+      <div class="sheet-row" role="listitem"><div class="n">3</div><div class="c">FII. DII. Nifty. You've heard the words a thousand times. Nobody ever taught them in school.</div></div>
+      <div class="sheet-row" role="listitem"><div class="n">4</div><div class="c">The conversation moves on. The smart thing to say arrives twenty minutes later, in the lift.</div></div>
+    </div>
+    <p class="after">We've all been there. Weighted Average is an attempt to fix <span>the cluelessness.</span></p>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="band">
+  <div class="wrap">
+    <div class="ref"><span>C1</span> The real problem</div>
+    <h2>Everyone has the news. Few know what to do with it.</h2>
+    <p class="lede">You don't need more headlines. You need someone to answer four questions before you walk into the room.</p>
+    <div class="qs">
+      <div class="q"><span class="k">01</span><div><h3>Which stories actually matter today?</h3><p>Three per newsletter. The ones people will bring up, not the ones that trended.</p></div></div>
+      <div class="q"><span class="k">02</span><div><h3>What's the real news underneath?</h3><p>The second-order thinking: implications, contributing factors, and why it touches your job.</p></div></div>
+      <div class="q"><span class="k">03</span><div><h3>How do I start the conversation?</h3><p>One line you can actually say out loud, with a specific fact in it.</p></div></div>
+      <div class="q"><span class="k">04</span><div><h3>What do I say when someone asks me?</h3><p>An answer framework that adds new facts, a sharper angle, and keeps the discussion going.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO -->
+<section>
+  <div class="wrap who-grid">
+    <div>
+      <div class="ref"><span>D1</span> Who it's for</div>
+      <h2>Built for the middle of the org chart.</h2>
+    </div>
+    <div class="who">
+      <div class="ladder">
+        <div class="rung"><div class="t">Juniors</div><div class="d">Get a pass. Nobody expects them to know yet.</div></div>
+        <div class="rung"><div class="t">Seniors</div><div class="d">Have learned to say something vague that sounds smart. Not a skill worth copying.</div></div>
+        <div class="rung you"><div class="t">Middle managers</div><div class="d">Are expected to actually know, and have the least time to read. This is for you.</div></div>
+      </div>
+      <p style="margin-top:22px;color:var(--muted)">You sit in the investment committee, the leadership review, the client dinner. Whether you work in finance, sales, HR, tech or operations, the conversation keeps turning to markets, deals and AI. Even people who track this all day rarely have time to work out the angle and the right thing to say. Students preparing for that world are welcome too.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="ref"><span>E1</span> What lands in your inbox</div>
+    <h2>Three newsletters. Every weekday.</h2>
+    <div class="letters">
+      <article class="letter">
+        <div class="tab">Sheet 1</div>
+        <h3><small>Weighted Average</small>Markets</h3>
+        <p>Nifty and Sensex, FII and DII flows, the rupee, crude, gold, RBI moves and the IPOs everyone's talking about.</p>
+      </article>
+      <article class="letter">
+        <div class="tab">Sheet 2</div>
+        <h3><small>Weighted Average</small>Business</h3>
+        <p>Deals, pivots, acquisitions and leadership changes at Indian companies, plus the strategy mistakes worth learning from.</p>
+      </article>
+      <article class="letter">
+        <div class="tab">Sheet 3</div>
+        <h3><small>Weighted Average</small>AI in Business</h3>
+        <p>How Indian companies are actually using AI, who they're hiring to run it, and which bets aren't paying off.</p>
+      </article>
+    </div>
+
+    <div class="anatomy">
+      <div>
+        <div class="ref" style="margin-top:8px"><span>E2</span> Every story, five parts</div>
+        <ol class="parts">
+          <li><b>Headline</b><span>Who did what, in one line.</span></li>
+          <li><b>What happened</b><span>The facts. Real names, real numbers.</span></li>
+          <li><b>The second order</b><span>What it really means, one layer deeper.</span></li>
+          <li><b>The Question</b><span>A line to start the conversation.</span></li>
+          <li><b>The Answer</b><span>What to say when someone else brings it up.</span></li>
+          <li class="extra"><b>In Plain English</b><span>The day's trickiest term, explained in three sentences.</span></li>
+        </ol>
+      </div>
+      <div class="sample" aria-label="Sample story">
+        <div class="meta"><span>Weighted Average Markets</span><span>Sample story · Jio Platforms IPO</span></div>
+        <div class="in">
+          <h4>Jio IPO Closes at 22.19x; QIB Portion at 70x — Listing Tomorrow at ₹1,344 GMP</h4>
+          <p><b>What happened.</b> Jio Platforms' ₹30,213 crore IPO closed on October 23 with final subscriptions of 22.19 times overall. The QIB (qualified institutional buyer) tranche was subscribed 70.55 times, the non-institutional investor (NII or HNI) portion closed at 14 times, and the retail individual investor portion was 2.72 times subscribed. The grey market premium heading into listing stands at approximately ₹225, implying an indicative listing price of ₹1,344 against the ₹1,119 upper band, a potential 20% premium. Jio Platforms lists on the BSE and NSE tomorrow, October 28.</p>
+          <p><b>The second order.</b> A 70.55x QIB subscription is exceptional even by Indian IPO standards. It means institutional investors collectively bid for 70 times the shares available to them, a level of conviction that suggests funds are not just trading the listing pop but building positions for the long-term story. The retail subscription of 2.72 times is telling in its own way: retail came in, but not in the frenzy that QIBs showed.</p>
+          <p>For allotment, retail applicants who applied for one lot of 12 shares at ₹1,119 (₹13,428 outlay) have a roughly 1-in-3 chance of getting shares, given the 2.72x retail subscription. NII applicants are allotted by lottery at the minimum application size, so roughly 1 in 14 will get shares. The listing day dynamic will be set by retail and NII holders who got allotment and are deciding whether to sell into the opening pop or hold. With anchor investors locked in, the float on October 28 is limited, which tends to support the GMP if demand holds.</p>
+          <div class="qa"><b>The Question</b>QIBs subscribed 70 times and retail only 2.72 times. Should a retail investor be worried that institutions know something retail doesn't, or relieved that they can actually get allotment?</div>
+          <div class="qa"><b>The Answer</b>Both readings have merit, but they apply to different time horizons. The 70x QIB subscription tells you that the large, well-resourced investors with access to management meetings and detailed financial models are strongly backing the Jio story over three to five years. The 2.72x retail subscription tells you that the average Indian investor is not applying in panic mode; they are measured. For allotment, 2.72x retail actually works in your favour: the lottery odds are reasonable, roughly one in three applications gets shares, versus the nightmare allotment ratios in the 30-50x retail subscriptions you sometimes see in hot SME IPOs. For tomorrow's listing, the GMP of ₹225 is pricing in a 20% pop. If you got allotment and your primary interest is the listing gain, that is a reasonable outcome to watch for. If your interest is the long-term Jio story (ARPU growth, 5G monetisation, digital services), then the listing price is largely irrelevant: you are buying a business, not a day-one trade.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE DEAL -->
+<section class="band">
+  <div class="wrap">
+    <div class="ref"><span>F1</span> How the Founding 100 works</div>
+    <h2>Help us build it. Read it free forever.</h2>
+    <div class="steps">
+      <div class="step"><div class="num">STEP 01</div><h3>Join</h3><p>Thirty seconds. Only 100 founding spots.</p></div>
+      <div class="step"><div class="num">STEP 02</div><h3>Read</h3><p>From Monday 2 November, all three newsletters land in your inbox every weekday for four weeks.</p></div>
+      <div class="step"><div class="num">STEP 03</div><h3>Give feedback</h3><p>One short form each week. Fill it in and the newsletters keep coming. Skip it and they stop.</p></div>
+      <div class="step prize"><div class="num">STEP 04</div><h3>Free for life</h3><p>Complete all four feedback forms with real, honest answers and get lifetime free access to all three newsletters.</p></div>
+    </div>
+    <div class="rule-strip" style="color:#fff">
+      <span>No payment, no card</span><span>Students welcome</span><span class="x">"All good 👍" doesn't count as feedback</span>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN -->
+<section id="join">
+  <div class="wrap join-grid">
+    <div>
+      <div class="ref"><span>G1</span> Claim a spot</div>
+      <h2>Become one of the Founding 100.</h2>
+      <p class="lede" style="margin-top:18px">Read all three newsletters, tell us what works and what doesn't, and help decide what Weighted Average becomes. Finish all four weeks and it's yours free, for life.</p>
+      <div class="counter" style="margin-top:30px;box-shadow:6px 6px 0 var(--blue)">
+        <div class="head"><span>Founding 100</span><em data-c-status>Open</em></div>
+        <div class="body">
+          <div class="big" data-c-big>100 <small>free spots</small></div>
+          <div class="label" data-c-label>founding spots, free for life</div>
+          <div class="note" data-c-note>First editions land Monday 2 November. Help shape it for 4 weeks, read it free forever.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-card" id="formCard">
+      <div class="head"><span>Signup sheet</span><em>Founding 100</em></div>
+      <div class="zf-wrap">
+        <iframe id="ziframe_746530" aria-label="Join the Weighted Average Founding 100" frameborder="0" src="https://forms.zohopublic.in/editorweighte1/form/FreeTrialRequest/formperma/hJn6VaErfUrJ4tSnlnK0tKPttAkWW9TbB13MMhJnesE"></iframe>
+      </div>
+      <p class="fine" style="padding:0 18px 20px">No payment details. We use your information only to run the Founding 100.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="ref"><span>H1</span> Questions</div>
+    <h2>Before you ask.</h2>
+    <div class="faq">
+      <details><summary>When does it start?</summary><p>Monday 2 November. Your first three editions land that morning, and then every weekday after.</p></details>
+      <details><summary>Is it actually free?</summary><p>Yes. No card, no payment details, nothing to cancel. The only thing we ask for is honest feedback each week.</p></details>
+      <details><summary>What happens after four weeks?</summary><p>If you've completed all four weekly feedback forms properly, all three newsletters stay free for you, for life. If you haven't, they stop, and you can choose to subscribe later.</p></details>
+      <details><summary>What counts as "feedback with intent"?</summary><p>Real answers. What you used in a meeting, what felt useless, what you wish we covered. Two honest lines beat ten polite ones.</p></details>
+      <details><summary>Why do you need my phone number?</summary><p>Only for Founding 100 messages, like a nudge if your weekly feedback form is pending. We don't share it with anyone.</p></details>
+      <details><summary>I'm a student. Can I join?</summary><p>Yes. Put "Student" as your designation and pick the field you're heading into.</p></details>
+      <details><summary>What if the 100 spots are gone?</summary><p>The signup form closes once 100 people have joined. Keep an eye on this page in case spots open up again.</p></details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#top"><span class="xbar" aria-hidden="true">x̄</span>WEIGHTED AVERAGE</a>
+    <p>Most newsletters tell you what happened. We tell you what to do with it.</p>
+    <small>© 2026 Weighted Average</small>
+  </div>
+</footer>
+
+<script type="text/javascript">
+/* Zoho Forms embed: passes this page's URL (including any utm_ tags) to the form as "referrername". */
+(function() {
+  try {
+    var zf_frame = document.getElementById("ziframe_746530");
+    var ifrmSrc = zf_frame.src;
+    if (!((new RegExp("[?&]referrername=")).test(ifrmSrc))) {
+      var rfr = window.location.href;
+      try {
+        rfr = window.self !== window.top ?
+          window.top.location.href :
+          (/^https?:\/\/[\w.-]+\.[a-zA-Z]{2,}/i.test(rfr) ? rfr : "");
+      } catch (e) {}
+      if (rfr && rfr !== "") {
+        if (rfr.length > 1800) {
+          var queryIndex = rfr.indexOf('?');
+          if (queryIndex > -1) { rfr = rfr.substring(0, queryIndex); }
+          if (rfr.length > 1800) { rfr = rfr.substring(0, 1800); }
+        }
+        ifrmSrc += ((ifrmSrc.indexOf('?') > 0) ? '&' : '?') + 'referrername=' + encodeURIComponent(rfr);
+      }
+    }
+    if (zf_frame.src !== ifrmSrc) { zf_frame.src = ifrmSrc; }
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>
